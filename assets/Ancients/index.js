@@ -10,4 +10,6 @@ const ancients = {
   shubNiggurath
 }
 
+
+
 export default ancients

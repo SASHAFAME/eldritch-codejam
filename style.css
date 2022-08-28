@@ -1,0 +1,250 @@
+body {
+    margin: 0 auto;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: url(../assets/home2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.background-shadow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.difficulty-container {
+    display: none;
+
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    margin: 30px;
+}
+
+.difficulty-container.active {
+    display: block;
+}
+
+.button {
+    border-radius: 50px;
+    padding: 15px 30px;
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color:antiquewhite;
+    border-style: none;
+
+    transition: 0.3s ease-in-out;
+}
+
+.button.active {
+    opacity: 70%;
+    box-shadow: 0 0 30px red;
+    transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.difficulty0 {
+    background-color: rgb(0, 159, 207);
+}
+
+.difficulty1 {
+    background-color: green;
+}
+
+.difficulty2 {
+    background-color: rgb(194, 78, 0);
+}
+
+.difficulty3 {
+    background-color: rgb(35, 35, 170);
+}
+
+.difficulty4 {
+    background-color: rgb(139, 1, 59);
+}
+
+
+.ancient {
+    display: flex;
+    min-height: 50px;
+    max-height: 250px;
+
+    border-radius: 10px;
+
+    margin: 40px;
+
+    transition: ease-in-out 0.3s;
+}
+
+.ancient.active {
+    transform: scale(0.9);
+    transition: ease-in-out 0.3s;
+    box-shadow: 0 0 30px rgb(229, 255, 0);
+}
+
+.ancients {
+    position: absolute;
+    z-index: 3;
+    height: inherit;
+    cursor: pointer;
+}
+
+.mix {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    margin: 30px;
+}
+
+.mix-button {
+    display: none;
+
+    background-color: purple;
+    border-radius: 50px;
+    padding: 15px 30px;
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color:antiquewhite;
+    border-style: none;
+}
+
+.mix-button:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.mix-button.active {
+    display: block;
+}
+
+.deck {
+    position: absolute;
+    z-index: 4;
+
+    left: 70.5%;
+    top: 5%;
+
+    display: none;
+}
+
+.deck.active {
+    display: block;
+}
+
+.level-container {
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.level-container.active {
+    display: block;
+}
+
+.level {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 10px;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color:antiquewhite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-level {
+    background-color: green;
+}
+
+.second-level {
+    background-color: rgb(194, 78, 0);
+}
+
+.third-level {
+    background-color: rgb(35, 35, 170);
+}
+
+.stage {
+    display: flex;
+    justify-content: center;
+
+}
+
+.stage-title {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color:antiquewhite;
+
+    text-align: center;
+}
+
+.stage-title.active {
+    color: red;
+}
+
+.open-card-container {
+    position:absolute;
+    z-index: 5;
+
+    left: 33%;
+}
+
+.back-card {
+    margin-bottom: 20px;
+    width: 170px;
+    cursor: pointer;
+
+    border-radius: 10px;
+}
+
+.back-card:hover {
+    opacity: 70%;
+}
+
+.card-result {
+    width: 170px;
+    height: 250px;
+    border-radius: 10px;
+
+    background-image: url('./assets/mythicCardBackground2.png');
+    background-size: contain;
+
+    display: none;
+}
+
+.card-result.active {
+    display: block;
+}
