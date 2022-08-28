@@ -140,7 +140,7 @@ function activeAncient() {
         function getRandom(min, max) {
             return Math.round(Math.random() * (max- min) + min)
         }
-        // console.log(getRandom(0, 2))
+        console.log(getRandom(0, 2))
 
         function openCard() {
             if (currentPack[0]+currentPack[1]+currentPack[2] > 0) {
