@@ -1,12 +1,14 @@
 body {
-    margin: 0 auto;
+    margin: 0;
 }
+
 
 .container {
     height: 100vh;
-    width: 100%;
+
     background: url(./assets/home2.jpg) no-repeat;
     background-size: cover;
+
 }
 
 .background-shadow {
@@ -46,7 +48,7 @@ body {
     padding: 15px 30px;
 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: calc(100vw - 98.5vw);
     color:antiquewhite;
     border-style: none;
 
@@ -92,7 +94,7 @@ body {
 
     border-radius: 10px;
 
-    margin: 40px;
+    margin: 30px;
 
     transition: ease-in-out 0.3s;
 }
@@ -106,8 +108,11 @@ body {
 .ancients {
     position: absolute;
     z-index: 3;
-    height: inherit;
     cursor: pointer;
+    max-height: 100vh;
+    
+
+    border: solid 2px red
 }
 
 .mix {
@@ -127,7 +132,7 @@ body {
     padding: 15px 30px;
 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: calc(100vw - 98.5vw);
     color:antiquewhite;
     border-style: none;
 }
@@ -177,7 +182,7 @@ body {
     border-radius: 10px;
     
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: calc(100vw - 98.5vw);
     color:antiquewhite;
 
     display: flex;
@@ -224,7 +229,7 @@ body {
 
 .back-card {
     margin-bottom: 20px;
-    width: 170px;
+    max-width: 170px;
     cursor: pointer;
 
     border-radius: 10px;
@@ -235,7 +240,7 @@ body {
 }
 
 .card-result {
-    width: 170px;
+    max-width: 170px;
     height: 250px;
     border-radius: 10px;
 
