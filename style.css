@@ -212,8 +212,6 @@ margin-bottom: 15px;
 .open-card-container {
     display: flex;
     justify-content: center;
-
-    
 }
 
 .back-card:hover {
@@ -293,3 +291,36 @@ margin-bottom: 15px;
         width: 55%;
     }
 }
+
+@media (max-width: 1250px) {
+    .ancient {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .ancient {
+        width: 100%;
+    }
+    .button {
+        border-radius: 50px;
+        padding: 3px 7px;
+        width: 100%;
+    
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: calc(100vw - 95.5vw);
+        color:antiquewhite;
+        border-style: none;
+    
+        transition: 0.3s ease-in-out;
+    }
+    .card-result {
+        width: 100%;
+    }
+    
+    .open-card {
+        width: 100%;
+    }
+
+}
+
