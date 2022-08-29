@@ -1,13 +1,25 @@
 body {
     margin: 0 auto;
+    background: url(./assets/home2.jpg) no-repeat;
+    background-size: cover;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-.container {
-    height: 100vh;
+img {
     width: 100%;
-    background: url(../assets/home2.jpg) no-repeat;
-    background-size: cover;
+    height: auto;
+  }
+
+.container {
+    display: flex;
 }
+
+.block {
+    width: 33%;
+    height: 100vh;
+  }
 
 .background-shadow {
     position: fixed;
@@ -16,24 +28,22 @@ body {
     left: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
+
+    z-index: -1;
 }
 
 .difficulty {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 50%;
 
     gap: 20px;
 }
 
 .difficulty-container {
     display: none;
-
-    position: absolute;
-    top: 50%;
-    left: 46%;
-    transform: translate(-50%, -50%);
     z-index: 2;
-
     margin: 30px;
 }
 
@@ -43,10 +53,11 @@ body {
 
 .button {
     border-radius: 50px;
-    padding: 15px 30px;
+    padding: 10px 20px;
+    width: 60%;
 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: calc(100vw - 98.5vw);
     color:antiquewhite;
     border-style: none;
 
@@ -86,13 +97,10 @@ body {
 
 
 .ancient {
-    display: flex;
-    min-height: 50px;
-    max-height: 250px;
+    width: 27%;
+    margin: 10px;
 
     border-radius: 10px;
-
-    margin: 40px;
 
     transition: ease-in-out 0.3s;
 }
@@ -104,32 +112,29 @@ body {
 }
 
 .ancients {
-    position: absolute;
     z-index: 3;
-    height: inherit;
     cursor: pointer;
 }
 
 .mix {
-    position: absolute;
     z-index: 3;
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    margin: 30px;
+
+    margin-top: 30%;
 }
 
 .mix-button {
-    display: none;
-
+    position: absolute;
+    right: 10%;
     background-color: purple;
     border-radius: 50px;
     padding: 15px 30px;
 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: calc(100vw - 98.5vw);
     color:antiquewhite;
     border-style: none;
+
+    display: none;
 }
 
 .mix-button:hover {
@@ -141,29 +146,19 @@ body {
     display: block;
 }
 
-.deck {
-    position: absolute;
-    z-index: 4;
-
+.block-table {
     left: 70.5%;
     top: 5%;
 
     display: none;
 }
 
-.deck.active {
+.block-table.active {
     display: block;
 }
 
 .level-container {
-    width: 500px;
-    height: 500px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+margin-bottom: 15px;
 }
 
 .level-container.active {
@@ -171,13 +166,12 @@ body {
 }
 
 .level {
-    height: 100px;
-    width: 100px;
+    width: 15%;
     margin: 5px;
     border-radius: 10px;
     
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: calc(100vw - 98.5vw);
     color:antiquewhite;
 
     display: flex;
@@ -187,6 +181,7 @@ body {
 
 .first-level {
     background-color: green;
+    height: 3.5em;
 }
 
 .second-level {
@@ -200,12 +195,11 @@ body {
 .stage {
     display: flex;
     justify-content: center;
-
 }
 
 .stage-title {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 30px;
+    font-size: calc(100vw - 98.5vw);
     color:antiquewhite;
 
     text-align: center;
@@ -216,18 +210,8 @@ body {
 }
 
 .open-card-container {
-    position:absolute;
-    z-index: 5;
-
-    left: 33%;
-}
-
-.back-card {
-    margin-bottom: 20px;
-    width: 170px;
-    cursor: pointer;
-
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .back-card:hover {
@@ -235,11 +219,11 @@ body {
 }
 
 .card-result {
-    width: 170px;
-    height: 250px;
+    width: 27%;
+    margin: 10px;
     border-radius: 10px;
 
-    background-image: url('./assets/mythicCardBackground2.png');
+    background: url('./assets/mythicCardBackground2.png') no-repeat;
     background-size: contain;
 
     display: none;
@@ -248,3 +232,95 @@ body {
 .card-result.active {
     display: block;
 }
+
+.open-card {
+    width: 27%;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.back-card {
+    border-radius: 10px;
+}
+
+.deck {
+    margin-top: 20%;
+}
+
+@media (max-width: 767px) {
+    .ancient {
+        width: 80%;
+    }
+
+    .difficulty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top:200%;
+    
+        gap: 30px;
+    }
+
+    .button {
+        border-radius: 50px;
+        padding: 3px 7px;
+        width: 100%;
+    
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: calc(100vw - 98.5vw);
+        color:antiquewhite;
+        border-style: none;
+    
+        transition: 0.3s ease-in-out;
+    }
+
+    .deck {
+        margin-top: 120%;
+    }
+}
+
+@media (max-width: 2500px) {
+    .ancient {
+        width: 27%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .ancient {
+        width: 55%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .ancient {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .ancient {
+        width: 85%;
+    }
+    .button {
+        border-radius: 50px;
+        padding: 3px 7px;
+        width: 100%;
+    
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: calc(100vw - 95.5vw);
+        color:antiquewhite;
+        border-style: none;
+    
+        transition: 0.3s ease-in-out;
+    }
+    .card-result {
+        width: 100%;
+    }
+    
+    .open-card {
+        width: 100%;
+    }
+
+}
+

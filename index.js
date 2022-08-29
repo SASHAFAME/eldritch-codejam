@@ -6,6 +6,8 @@ const buttons = document.querySelectorAll('.button')
 
 const mixBtn = document.querySelector('.mix-button')
 
+const tableContainer = document.querySelector('.block-table')
+
 const deck = document.querySelector('.deck')
 
 const backCard = document.querySelector('.back-card')
@@ -39,7 +41,7 @@ buttons.forEach(btn => {
 
 function showMixBtn() {
     mixBtn.classList.add('active')
-    deck.classList.remove('active')
+    tableContainer.classList.remove('active')
 }
 
 function hideMixBtn() {
@@ -56,7 +58,7 @@ function hideDifficulty() {
 }
 
 function showDeck() {
-    deck.classList.add('active')
+    tableContainer.classList.add('active')
 }
 
 
